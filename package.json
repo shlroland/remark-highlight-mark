@@ -25,6 +25,7 @@
     "types": "./lib/index.js"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "@tsconfig/node-lts": "^20.1.3",
     "@types/node": "^20.14.13",
     "c8": "^7.14.0",
@@ -33,7 +34,8 @@
     "typescript": "^5.5.4"
   },
   "scripts": {
-    "build": "pnpm -F micromark-extension-highlight-mark test && pnpm -F mdast-util-highlight-mark test && pnpm -F remark-highlight-mark build"
+    "build": "pnpm -F micromark-extension-highlight-mark test && pnpm -F mdast-util-highlight-mark test && pnpm -F remark-highlight-mark build",
+    "ci:publish": "pnpm publish -r"
   },
   "typeCoverage": {
     "atLeast": 100,
