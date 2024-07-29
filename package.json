@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build": "pnpm -F micromark-extension-highlight-mark test && pnpm -F mdast-util-highlight-mark test && pnpm -F remark-highlight-mark build",
-    "ci:publish": "pnpm publish -r"
+    "ci:publish": "pnpm publish -r --no-git-checks"
   },
   "typeCoverage": {
     "atLeast": 100,
