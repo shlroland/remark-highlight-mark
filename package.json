@@ -32,10 +32,8 @@
     "type-coverage": "^2.29.1",
     "typescript": "^5.5.4"
   },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-wooorm"
-    ]
+  "scripts": {
+    "build": "pnpm -F micromark-extension-highlight-mark test && pnpm -F mdast-util-highlight-mark test && pnpm -F remark-highlight-mark build"
   },
   "typeCoverage": {
     "atLeast": 100,
