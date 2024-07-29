@@ -21,8 +21,8 @@
   ],
   "exports": {
     "development": "./src/index.ts",
-    "default": "./src/index.ts",
-    "types": "./src/index.ts"
+    "default": "./lib/index.js",
+    "types": "./lib/index.js"
   },
   "dependencies": {
     "mdast-util-from-markdown": "^2.0.1",
