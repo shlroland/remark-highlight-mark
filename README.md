@@ -21,7 +21,7 @@ This project is useful when you want to support highlight-mark(`==abc==`) in mar
 When you need to support [`micromark`][micromark], you need to use the exported `highlightMarkHtml` and `highlightMark` from the package.
 
 ```ts
-import { highlightMarkHtml, highlightMark } from 'remark-highlight-mark'
+import { highlightMarkHtml, highlightMark } from 'micromark-extension-highlight-mark'
 
 micromark('a ==b==', {
   extensions: [defaults],
@@ -32,7 +32,7 @@ micromark('a ==b==', {
 When you need to support [`mdast`][mdast], you need to use the exported `highlightMarkFromMarkdown` and `highlightMarkToMarkdown` from the package.
 
 ```ts
-import { highlightMarkFromMarkdown, highlightMarkToMarkdown } from 'remark-highlight-mark'
+import { highlightMarkFromMarkdown, highlightMarkToMarkdown } from 'mdast-util-highlight-mark'
 
 fromMarkdown('a ==b== c.', {
   extensions: [highlightMark()],
@@ -62,6 +62,10 @@ export const remark = () =>
 
 ```
 
+## Types
+
+This package is fully typed with [TypeScript][].
+
 ## HTML
 
 When tilde sequences match, they together relate to the `<mark>` element in
@@ -71,3 +75,17 @@ See [*§ 4.5.23 The mark element*][html-mark] in the HTML spec for more info.
 ## License
 
 [MIT][license]
+
+[mdast-util-gfm-strikethrough]: https://github.com/syntax-tree/mdast-util-gfm-strikethrough
+
+[license]: license
+
+[mdast-util-gfm-strikethrough]: https://github.com/syntax-tree/mdast-util-gfm-strikethrough
+
+[micromark-extension-gfm-strikethrough]: https://github.com/micromark/micromark-extension-gfm-strikethrough
+
+[remark-gfm]: https://github.com/remarkjs/remark-gfm
+
+[micromark]: https://github.com/micromark/micromark
+
+[mdast]: https://github.com/syntax-tree/mdast?tab=readme-ov-file#thematicbreak
