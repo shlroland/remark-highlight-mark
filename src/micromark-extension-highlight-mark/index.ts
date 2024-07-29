@@ -1,4 +1,4 @@
-export { highlightMarkHtml as markhighlightHtml } from './html.js'
+export { highlightMarkHtml } from './html.js'
 export { highlightMark } from './syntax.js'
 
 declare module 'micromark-util-types' {
