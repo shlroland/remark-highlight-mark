@@ -4,17 +4,17 @@ import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import { removePosition } from 'unist-util-remove-position'
 import {
-  markHighlight,
-  markHighlightFromMarkdown,
-  markHighlightToMarkdown,
+  highlightMark,
+  highlightMarkFromMarkdown,
+  highlightMarkToMarkdown,
 } from '../lib/index.js'
 
-test('markHighlightFromMarkdown', () => {
+test('highlightMarkFromMarkdown', () => {
   assert.deepEqual(
     removePosition(
       fromMarkdown('a ==b== c.', {
-        extensions: [markHighlight()],
-        mdastExtensions: [markHighlightFromMarkdown],
+        extensions: [highlightMark()],
+        mdastExtensions: [highlightMarkFromMarkdown],
       }),
       true,
     ),
@@ -37,8 +37,8 @@ test('markHighlightFromMarkdown', () => {
   assert.deepEqual(
     removePosition(
       fromMarkdown('a ==b\nc== d.', {
-        extensions: [markHighlight()],
-        mdastExtensions: [markHighlightFromMarkdown],
+        extensions: [highlightMark()],
+        mdastExtensions: [highlightMarkFromMarkdown],
       }),
       true,
     ),
@@ -59,7 +59,7 @@ test('markHighlightFromMarkdown', () => {
   )
 })
 
-test('markHighlightToMarkdown', () => {
+test('highlightMarkToMarkdown', () => {
   assert.deepEqual(
     toMarkdown(
       {
@@ -70,7 +70,7 @@ test('markHighlightToMarkdown', () => {
           { type: 'text', value: ' c.' },
         ],
       },
-      { extensions: [markHighlightToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] },
     ),
     'a ==b== c.\n',
     'should serialize highlight',
@@ -86,7 +86,7 @@ test('markHighlightToMarkdown', () => {
           { type: 'text', value: ' d.' },
         ],
       },
-      { extensions: [markHighlightToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] },
     ),
     'a ==b\nc== d.\n',
     'should serialize strikethrough w/ eols',
@@ -104,7 +104,7 @@ test('markHighlightToMarkdown', () => {
           },
         ],
       },
-      { extensions: [markHighlightToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] },
     ),
     '[](=a)\n',
     'should not escape equalsTo in a `destinationLiteral`',
@@ -122,7 +122,7 @@ test('markHighlightToMarkdown', () => {
           },
         ],
       },
-      { extensions: [markHighlightToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] },
     ),
     '[link text](=a)\n',
     'should not escape equalsTo in a `destinationRaw`',
@@ -141,7 +141,7 @@ test('markHighlightToMarkdown', () => {
           },
         ],
       },
-      { extensions: [markHighlightToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] },
     ),
     '[][=a]\n',
     'should not escape equalsTo in a `reference`',
@@ -160,7 +160,7 @@ test('markHighlightToMarkdown', () => {
           },
         ],
       },
-      { extensions: [markHighlightToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] },
     ),
     '[](# "=a")\n',
     'should not escape equalsTo in a `title` (double quotes)',
@@ -181,7 +181,7 @@ test('markHighlightToMarkdown', () => {
       },
       {
         quote: "'",
-        extensions: [markHighlightToMarkdown],
+        extensions: [highlightMarkToMarkdown],
       },
     ),
     "[](# '=a')\n",

@@ -18,7 +18,7 @@ handleMark.peek = peekMark
  *
  * @type {Array<ConstructName>}
  */
-const constructsWithoutMarkHighlight: ConstructName[] = [
+const constructsWithoutHighlightMark: ConstructName[] = [
   'autolink',
   'destinationLiteral',
   'destinationRaw',
@@ -32,7 +32,7 @@ const constructsWithoutMarkHighlight: ConstructName[] = [
  *
  * @type {FromMarkdownExtension}
  */
-export const markHighlightFromMarkdown: FromMarkdownExtension = {
+export const highlightMarkFromMarkdown: FromMarkdownExtension = {
   canContainEols: ['mark'],
   enter: { highlight: enterHighlight },
   exit: { highlight: exitHighlight },
@@ -49,12 +49,12 @@ function exitHighlight(this: CompileContext, token: Token) {
 /**
  * Extension for `mdast-util-to-markdown` to enable mark highlight.
  */
-export const markHighlightToMarkdown = {
+export const highlightMarkToMarkdown = {
   unsafe: [
     {
       character: '=',
       inConstruct: 'phrasing',
-      notInConstruct: constructsWithoutMarkHighlight,
+      notInConstruct: constructsWithoutHighlightMark,
     },
   ],
   handlers: { mark: handleMark },
@@ -66,7 +66,8 @@ function handleMark(node: Highlight, _: Parent, state: State, info: Info) {
   const exit = state.enter('highlight')
   let value = tracker.move(marker + marker)
   value += tracker.move(
-    state.containerPhrasing(node as any, {
+    //@ts-expect-error ignore error
+    state.containerPhrasing(node, {
       before: value,
       after: marker,
       ...tracker.current(),

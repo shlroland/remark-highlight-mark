@@ -1,5 +1,5 @@
-export { markhighlightHtml } from './html.js'
-export { markHighlight } from './syntax.js'
+export { highlightMarkHtml as markhighlightHtml } from './html.js'
+export { highlightMark } from './syntax.js'
 
 declare module 'micromark-util-types' {
   interface TokenTypeMap {

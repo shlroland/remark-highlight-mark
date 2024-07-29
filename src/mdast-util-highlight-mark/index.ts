@@ -33,4 +33,4 @@ declare module 'mdast' {
   }
 }
 
-export { markHighlightFromMarkdown, markHighlightToMarkdown } from './handle.js'
+export { highlightMarkFromMarkdown , highlightMarkToMarkdown } from './handle.js'

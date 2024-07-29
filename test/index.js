@@ -8,10 +8,10 @@ test('core import', async () => {
     Object.keys(await import('../lib/index.js')).sort(),
     [
       'default',
-      'markHighlight',
-      'markHighlightFromMarkdown',
-      'markHighlightToMarkdown',
-      'markhighlightHtml',
+      'highlightMark',
+      'highlightMarkFromMarkdown',
+      'highlightMarkToMarkdown',
+      'highlightMarkHtml',
     ],
     'should expose the public api',
   )

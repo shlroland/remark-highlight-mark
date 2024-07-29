@@ -2,8 +2,8 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { micromark } from 'micromark'
 import {
-  markhighlightHtml as html,
-  markHighlight as syntax,
+  highlightMarkHtml as html,
+  highlightMark as syntax,
 } from '../lib/index.js'
 
 test('markdown -> html (micromark)', () => {

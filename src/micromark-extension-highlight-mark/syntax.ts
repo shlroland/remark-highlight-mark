@@ -24,7 +24,7 @@ const HIGHLIGHT_TEXT = 'highlightText'
  *   Extension for `micromark` that can be passed in `extensions`, to
  *   enable highlight syntax.
  */
-export function markHighlight(): Extension {
+export function highlightMark(): Extension {
   const tokenizer = {
     tokenize: tokenizeHighlight,
     resolveAll: resolveAllHighlight,

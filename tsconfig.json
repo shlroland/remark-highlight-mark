@@ -6,6 +6,9 @@
   "exclude": ["coverage/", "lib/", "node_modules/", "index.js"],
   "compilerOptions": {
     "module": "Preserve",
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "newLine": "lf",
+    "outDir": "lib",
+    "declaration": true
   }
 }
