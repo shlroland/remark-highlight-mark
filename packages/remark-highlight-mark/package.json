@@ -1,0 +1,41 @@
+{
+  "name": "remark-highlight-mark",
+  "version": "1.0.0",
+  "description": "remark plugin to support highlight mark",
+  "license": "MIT",
+  "keywords": [
+    "github",
+    "markdown",
+    "mdast",
+    "plugin",
+    "remark",
+    "remark-plugin",
+    "unified",
+    "highlight",
+    "mark",
+    "highlight-mark"
+  ],
+  "repository": "https://github.com/shlroland/remark-highlight-mark",
+  "bugs": "https://github.com/shlroland/remark-highlight-mark/tissues",
+  "author": "shlroland <shlroland1995@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {
+    "mdast-util-highlight-mark": "workspace:*",
+    "micromark-extension-highlight-mark": "workspace:*"
+  },
+  "files": [
+    "./src",
+    "./lib"
+  ],
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "default": "./lib/index.js"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "unified": "^11.0.5"
+  }
+}

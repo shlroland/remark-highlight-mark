@@ -1,9 +1,9 @@
 import type { Processor } from 'unified'
+import { highlightMark } from 'micromark-extension-highlight-mark'
 import {
-  highlightMark,
   highlightMarkFromMarkdown,
   highlightMarkToMarkdown,
-} from '../index.js'
+} from 'mdast-util-highlight-mark'
 
 /**
  * Plugin to support mark highlight.

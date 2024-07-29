@@ -1,4 +1,3 @@
-import 'mdast'
 // Add custom data tracked to turn a syntax tree into markdown.
 declare module 'mdast-util-to-markdown' {
   interface ConstructNameMap {

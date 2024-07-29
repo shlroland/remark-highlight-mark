@@ -33,7 +33,7 @@ const constructsWithoutHighlightMark: ConstructName[] = [
  * @type {FromMarkdownExtension}
  */
 export const highlightMarkFromMarkdown: FromMarkdownExtension = {
-  canContainEols: ['mark'],
+  canContainEols: ['highlight'],
   enter: { highlight: enterHighlight },
   exit: { highlight: exitHighlight },
 }
@@ -57,7 +57,7 @@ export const highlightMarkToMarkdown = {
       notInConstruct: constructsWithoutHighlightMark,
     },
   ],
-  handlers: { mark: handleMark },
+  handlers: { highlight: handleMark },
 }
 
 function handleMark(node: Highlight, _: Parent, state: State, info: Info) {

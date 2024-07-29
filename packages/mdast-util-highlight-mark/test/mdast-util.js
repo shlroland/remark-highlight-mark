@@ -4,20 +4,20 @@ import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import { removePosition } from 'unist-util-remove-position'
 import {
-  highlightMark,
   highlightMarkFromMarkdown,
   highlightMarkToMarkdown,
 } from '../lib/index.js'
+import { highlightMark } from 'micromark-extension-highlight-mark'
 
 test('highlightMarkFromMarkdown', () => {
+  const root = fromMarkdown('a ==b== c.', {
+    extensions: [highlightMark()],
+    mdastExtensions: [highlightMarkFromMarkdown],
+  })
+  removePosition(root, { force: true })
+
   assert.deepEqual(
-    removePosition(
-      fromMarkdown('a ==b== c.', {
-        extensions: [highlightMark()],
-        mdastExtensions: [highlightMarkFromMarkdown],
-      }),
-      true,
-    ),
+    root,
     {
       type: 'root',
       children: [
@@ -25,23 +25,22 @@ test('highlightMarkFromMarkdown', () => {
           type: 'paragraph',
           children: [
             { type: 'text', value: 'a ' },
-            { type: 'mark', children: [{ type: 'text', value: 'b' }] },
+            { type: 'highlight', children: [{ type: 'text', value: 'b' }] },
             { type: 'text', value: ' c.' },
           ],
         },
       ],
     },
-    'should support highlight',
+    'should support highlight'
   )
+  const root2 = fromMarkdown('a ==b\nc== d.', {
+    extensions: [highlightMark()],
+    mdastExtensions: [highlightMarkFromMarkdown],
+  })
+  removePosition(root2, { force: true })
 
   assert.deepEqual(
-    removePosition(
-      fromMarkdown('a ==b\nc== d.', {
-        extensions: [highlightMark()],
-        mdastExtensions: [highlightMarkFromMarkdown],
-      }),
-      true,
-    ),
+    root2,
     {
       type: 'root',
       children: [
@@ -49,13 +48,13 @@ test('highlightMarkFromMarkdown', () => {
           type: 'paragraph',
           children: [
             { type: 'text', value: 'a ' },
-            { type: 'mark', children: [{ type: 'text', value: 'b\nc' }] },
+            { type: 'highlight', children: [{ type: 'text', value: 'b\nc' }] },
             { type: 'text', value: ' d.' },
           ],
         },
       ],
     },
-    'should support highlight w/ eols',
+    'should support highlight w/ eols'
   )
 })
 
@@ -66,14 +65,14 @@ test('highlightMarkToMarkdown', () => {
         type: 'paragraph',
         children: [
           { type: 'text', value: 'a ' },
-          { type: 'mark', children: [{ type: 'text', value: 'b' }] },
+          { type: 'highlight', children: [{ type: 'text', value: 'b' }] },
           { type: 'text', value: ' c.' },
         ],
       },
-      { extensions: [highlightMarkToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] }
     ),
     'a ==b== c.\n',
-    'should serialize highlight',
+    'should serialize highlight'
   )
 
   assert.deepEqual(
@@ -82,14 +81,14 @@ test('highlightMarkToMarkdown', () => {
         type: 'paragraph',
         children: [
           { type: 'text', value: 'a ' },
-          { type: 'mark', children: [{ type: 'text', value: 'b\nc' }] },
+          { type: 'highlight', children: [{ type: 'text', value: 'b\nc' }] },
           { type: 'text', value: ' d.' },
         ],
       },
-      { extensions: [highlightMarkToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] }
     ),
     'a ==b\nc== d.\n',
-    'should serialize strikethrough w/ eols',
+    'should serialize strikethrough w/ eols'
   )
 
   assert.equal(
@@ -104,10 +103,10 @@ test('highlightMarkToMarkdown', () => {
           },
         ],
       },
-      { extensions: [highlightMarkToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] }
     ),
     '[](=a)\n',
-    'should not escape equalsTo in a `destinationLiteral`',
+    'should not escape equalsTo in a `destinationLiteral`'
   )
 
   assert.equal(
@@ -122,10 +121,10 @@ test('highlightMarkToMarkdown', () => {
           },
         ],
       },
-      { extensions: [highlightMarkToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] }
     ),
     '[link text](=a)\n',
-    'should not escape equalsTo in a `destinationRaw`',
+    'should not escape equalsTo in a `destinationRaw`'
   )
 
   assert.equal(
@@ -141,10 +140,10 @@ test('highlightMarkToMarkdown', () => {
           },
         ],
       },
-      { extensions: [highlightMarkToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] }
     ),
     '[][=a]\n',
-    'should not escape equalsTo in a `reference`',
+    'should not escape equalsTo in a `reference`'
   )
 
   assert.equal(
@@ -160,10 +159,10 @@ test('highlightMarkToMarkdown', () => {
           },
         ],
       },
-      { extensions: [highlightMarkToMarkdown] },
+      { extensions: [highlightMarkToMarkdown] }
     ),
     '[](# "=a")\n',
-    'should not escape equalsTo in a `title` (double quotes)',
+    'should not escape equalsTo in a `title` (double quotes)'
   )
 
   assert.equal(
@@ -182,9 +181,9 @@ test('highlightMarkToMarkdown', () => {
       {
         quote: "'",
         extensions: [highlightMarkToMarkdown],
-      },
+      }
     ),
     "[](# '=a')\n",
-    'should not escape equalsTo in a `title` (single quotes)',
+    'should not escape equalsTo in a `title` (single quotes)'
   )
 })

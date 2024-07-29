@@ -1,0 +1,47 @@
+{
+  "name": "micromark-extension-highlight-mark",
+  "version": "1.0.0",
+  "description": "micromark extension to support highlight mark",
+  "license": "MIT",
+  "keywords": [
+    "micromark",
+    "micromark-extension",
+    "highlight-mark",
+    "mark",
+    "markdown",
+    "unified"
+  ],
+  "repository": "https://github.com/shlroland/remark-highlight-mark",
+  "bugs": "https://github.com/shlroland/remark-highlight-mark/tissues",
+  "author": "shlroland <shlroland1995@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {
+    "micromark-util-chunked": "^2.0.0",
+    "micromark-util-classify-character": "^2.0.0",
+    "micromark-util-resolve-all": "^2.0.0",
+    "micromark-util-symbol": "^2.0.0",
+    "micromark-util-types": "^2.0.0",
+    "uvu": "^0.5.6"
+  },
+  "devDependencies": {
+    "micromark": "^4.0.0",
+    "tsup": "^8.2.3"
+  },
+  "files": [
+    "./src",
+    "./lib"
+  ],
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "default": "./lib/index.js"
+  },
+  "scripts": {
+    "test-api-dev": "node --conditions development test/micromark.js",
+    "test-api-prod": "node --conditions production test/micromark.js",
+    "test-api": "pnpm run test-api-dev && pnpm run test-api-prod",
+    "test-coverage": "c8 --100 --reporter lcov pnpm test-api",
+    "test": "pnpm run build && pnpm run test-coverage",
+    "build": "tsup"
+  }
+}

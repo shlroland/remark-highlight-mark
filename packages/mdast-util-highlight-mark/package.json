@@ -1,0 +1,50 @@
+{
+  "name": "mdast-util-highlight-mark",
+  "version": "1.0.0",
+  "description": "mdast extension to parse and serialize highlight mark",
+  "license": "MIT",
+  "keywords": [
+    "unist",
+    "mdast",
+    "mdast-util",
+    "util",
+    "utility",
+    "markdown",
+    "markup",
+    "highlight-mark",
+    "highlight",
+    "mark"
+  ],
+  "dependencies": {
+    "micromark-extension-highlight-mark": "workspace:*"
+  },
+  "repository": "https://github.com/shlroland/remark-highlight-mark",
+  "bugs": "https://github.com/shlroland/remark-highlight-mark/tissues",
+  "author": "shlroland <shlroland1995@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "devDependencies": {
+    "@types/mdast": "^4.0.4",
+    "mdast-util-from-markdown": "^2.0.1",
+    "mdast-util-to-markdown": "^2.1.0",
+    "micromark-util-types": "^2.0.0",
+    "tsup": "^8.2.3",
+    "unist-util-remove-position": "^5.0.0"
+  },
+  "files": [
+    "./src",
+    "./lib"
+  ],
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "default": "./lib/index.js"
+  },
+  "scripts": {
+    "test-api-dev": "node --conditions development test/mdast-util.js",
+    "test-api-prod": "node --conditions production test/mdast-util.js",
+    "test-api": "pnpm run test-api-dev && pnpm run test-api-prod",
+    "test-coverage": "c8 --100 --reporter lcov pnpm test-api",
+    "test": "pnpm run build && pnpm run test-coverage",
+    "build": "tsup"
+  }
+}
