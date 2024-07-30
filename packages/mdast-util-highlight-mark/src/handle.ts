@@ -1,4 +1,4 @@
-import type { ConstructName, Info, State } from 'mdast-util-to-markdown'
+import type { ConstructName, Info, State, Options } from 'mdast-util-to-markdown'
 import type {
   CompileContext,
   Extension as FromMarkdownExtension,
@@ -49,7 +49,7 @@ function exitHighlight(this: CompileContext, token: Token) {
 /**
  * Extension for `mdast-util-to-markdown` to enable mark highlight.
  */
-export const highlightMarkToMarkdown = {
+export const highlightMarkToMarkdown: Options = {
   unsafe: [
     {
       character: '=',
@@ -60,7 +60,7 @@ export const highlightMarkToMarkdown = {
   handlers: { highlight: handleMark },
 }
 
-function handleMark(node: Highlight, _: Parent, state: State, info: Info) {
+function handleMark(node: Highlight, _: Parent | undefined, state: State, info: Info) {
   const marker = '='
   const tracker = state.createTracker(info)
   const exit = state.enter('highlight')
@@ -71,7 +71,7 @@ function handleMark(node: Highlight, _: Parent, state: State, info: Info) {
       before: value,
       after: marker,
       ...tracker.current(),
-    }),
+    })
   )
 
   value += tracker.move(marker + marker)

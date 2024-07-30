@@ -4,24 +4,17 @@ import {
   highlightMarkFromMarkdown,
   highlightMarkToMarkdown,
 } from 'mdast-util-highlight-mark'
-
+import { add } from 'unist-util-add'
 /**
  * Plugin to support mark highlight.
  *
  * @this {import('unified').Processor}
  * @type {import('unified').Plugin<[Options?]|void[], Root>}
  */
-export const remarkHighlightMark: Plugin =  function remarkHighlightMark(this: Processor) {
+export const remarkHighlightMark: Plugin = function remarkHighlightMark(this: Processor) {
   const data = this.data()
 
-  add('micromarkExtensions', highlightMark())
-  add('fromMarkdownExtensions', highlightMarkFromMarkdown)
-  add('toMarkdownExtensions', highlightMarkToMarkdown)
-
-  function add(field: string, value: unknown) {
-    // @ts-expect-error ignore types
-    if (data[field]) data[field].push(value)
-    // @ts-expect-error ignore types
-    else data[field] = [value]
-  }
+  add(data, 'micromarkExtensions', highlightMark())
+  add(data, 'fromMarkdownExtensions', highlightMarkFromMarkdown)
+  add(data, 'toMarkdownExtensions', highlightMarkToMarkdown)
 }
