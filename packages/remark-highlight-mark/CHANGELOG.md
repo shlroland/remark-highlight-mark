@@ -1,5 +1,11 @@
 # remark-highlight-mark
 
+## 1.2.0
+
+### Minor Changes
+
+- 0a54aa6: chore: nothing
+
 ## 1.1.2
 
 ### Patch Changes
