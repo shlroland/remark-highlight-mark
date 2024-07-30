@@ -1,5 +1,11 @@
 # remark-highlight-mark
 
+## 1.1.1
+
+### Patch Changes
+
+- 18e5e91: update types
+
 ## 1.1.0
 
 ### Minor Changes
