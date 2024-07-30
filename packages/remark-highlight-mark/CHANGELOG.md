@@ -1,5 +1,13 @@
 # remark-highlight-mark
 
+## 1.2.1
+
+### Patch Changes
+
+- d88f211: chore: update types and add `add` method
+- Updated dependencies [d88f211]
+  - mdast-util-highlight-mark@1.2.1
+
 ## 1.2.0
 
 ### Minor Changes

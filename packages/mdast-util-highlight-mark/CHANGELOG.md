@@ -1,5 +1,11 @@
 # mdast-util-highlight-mark
 
+## 1.2.1
+
+### Patch Changes
+
+- d88f211: chore: update types and add `add` method
+
 ## 1.2.0
 
 ### Minor Changes
