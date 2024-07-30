@@ -1,5 +1,11 @@
 # mdast-util-highlight-mark
 
+## 1.2.0
+
+### Minor Changes
+
+- cf467b8: refactor: rename `mark` to `highlight`
+
 ## 1.1.0
 
 ### Minor Changes

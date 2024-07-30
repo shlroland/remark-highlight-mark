@@ -1,5 +1,12 @@
 # remark-highlight-mark
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies [cf467b8]
+  - mdast-util-highlight-mark@1.2.0
+
 ## 1.1.1
 
 ### Patch Changes
