@@ -1,9 +1,11 @@
-import type { Processor } from 'unified'
+import type { Processor, Plugin } from 'unified'
 import { highlightMark } from 'micromark-extension-highlight-mark'
 import {
   highlightMarkFromMarkdown,
   highlightMarkToMarkdown,
 } from 'mdast-util-highlight-mark'
+
+export type * from 'mdast-util-highlight-mark'
 
 /**
  * Plugin to support mark highlight.
@@ -11,7 +13,7 @@ import {
  * @this {import('unified').Processor}
  * @type {import('unified').Plugin<[Options?]|void[], Root>}
  */
-export function remarkHighlightMark(this: Processor) {
+export const remarkHighlightMark: Plugin =  function remarkHighlightMark(this: Processor) {
   const data = this.data()
 
   add('micromarkExtensions', highlightMark())
