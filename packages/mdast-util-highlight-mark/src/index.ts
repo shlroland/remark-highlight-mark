@@ -20,15 +20,15 @@ declare module 'mdast' {
   }
 
   export interface StaticPhrasingContentMap {
-    mark: Highlight
+    highlight: Highlight
   }
 
   interface PhrasingContentMap {
-    mark: Highlight
+    highlight: Highlight
   }
 
   interface RootContentMap {
-    mark: Highlight
+    highlight: Highlight
   }
 }
 
