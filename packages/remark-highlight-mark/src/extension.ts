@@ -5,8 +5,6 @@ import {
   highlightMarkToMarkdown,
 } from 'mdast-util-highlight-mark'
 
-export type * from 'mdast-util-highlight-mark'
-
 /**
  * Plugin to support mark highlight.
  *
