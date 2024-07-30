@@ -23,6 +23,7 @@
   "author": "shlroland <shlroland1995@gmail.com>",
   "sideEffects": false,
   "type": "module",
+  "types": "./lib/index.d.ts",
   "devDependencies": {
     "@types/mdast": "^4.0.4",
     "mdast-util-from-markdown": "^2.0.1",
