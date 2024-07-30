@@ -89,3 +89,11 @@ See [*§ 4.5.23 The mark element*][html-mark] in the HTML spec for more info.
 [micromark]: https://github.com/micromark/micromark
 
 [mdast]: https://github.com/syntax-tree/mdast?tab=readme-ov-file#thematicbreak
+
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[typescript]: https://www.typescriptlang.org
+
+[remark]: https://remarkjs.com/#1
+
+[html-mark]: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element

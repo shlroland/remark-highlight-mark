@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "description": "remark plugin to support highlight mark",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "keywords": [
     "github",
     "markdown",
@@ -16,7 +19,7 @@
     "highlight-mark"
   ],
   "repository": "https://github.com/shlroland/remark-highlight-mark",
-  "bugs": "https://github.com/shlroland/remark-highlight-mark/tissues",
+  "bugs": "https://github.com/shlroland/remark-highlight-mark/issues",
   "author": "shlroland <shlroland1995@gmail.com>",
   "sideEffects": false,
   "type": "module",
