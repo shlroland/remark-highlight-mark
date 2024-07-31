@@ -5,6 +5,7 @@ import { resolveAll } from 'micromark-util-resolve-all'
 import { codes, constants, types } from 'micromark-util-symbol'
 import type {
   Code,
+  Construct,
   Effects,
   Event,
   Extension,
@@ -26,9 +27,10 @@ const HIGHLIGHT_TEXT = 'highlightText'
  */
 export function highlightMark(): Extension {
   const tokenizer = {
+    name: 'highlight',
     tokenize: tokenizeHighlight,
     resolveAll: resolveAllHighlight,
-  }
+  } satisfies Construct
 
   return {
     text: { [codes.equalsTo]: tokenizer },
