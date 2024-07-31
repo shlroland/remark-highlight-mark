@@ -1,5 +1,11 @@
 # micromark-extension-highlight-mark
 
+## 1.2.0
+
+### Minor Changes
+
+- a4742b2: add `name` for tokenizer
+
 ## 1.1.0
 
 ### Minor Changes

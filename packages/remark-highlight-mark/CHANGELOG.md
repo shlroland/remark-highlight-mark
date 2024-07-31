@@ -1,5 +1,13 @@
 # remark-highlight-mark
 
+## 1.2.2
+
+### Patch Changes
+
+- Updated dependencies [a4742b2]
+  - micromark-extension-highlight-mark@1.2.0
+  - mdast-util-highlight-mark@1.2.2
+
 ## 1.2.1
 
 ### Patch Changes
