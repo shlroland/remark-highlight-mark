@@ -1,6 +1,6 @@
 {
   "name": "mdast-util-highlight-mark",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "mdast extension to parse and serialize highlight mark",
   "license": "MIT",
   "keywords": [
