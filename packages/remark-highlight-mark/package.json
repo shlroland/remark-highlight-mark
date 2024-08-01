@@ -38,7 +38,7 @@
     "default": "./lib/index.js"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && echo '/// <reference types=\"mdast-util-highlight-mark\" />' | cat - lib/index.d.ts > lib/index.d.ts.bak && mv lib/index.d.ts.bak lib/index.d.ts"
   },
   "devDependencies": {
     "remark-parse": "^11.0.0",
