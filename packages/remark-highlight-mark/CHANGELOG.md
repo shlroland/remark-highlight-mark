@@ -1,5 +1,11 @@
 # remark-highlight-mark
 
+## 1.4.0
+
+### Minor Changes
+
+- 19c71e4: add triple slash reference
+
 ## 1.3.0
 
 ### Minor Changes
