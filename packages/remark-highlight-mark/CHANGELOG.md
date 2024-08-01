@@ -1,5 +1,11 @@
 # remark-highlight-mark
 
+## 1.3.0
+
+### Minor Changes
+
+- 9398205: update d.ts
+
 ## 1.2.2
 
 ### Patch Changes
