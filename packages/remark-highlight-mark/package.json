@@ -1,6 +1,6 @@
 {
   "name": "remark-highlight-mark",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "remark plugin to support highlight mark",
   "license": "MIT",
   "engines": {
