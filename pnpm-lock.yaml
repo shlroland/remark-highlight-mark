@@ -93,7 +93,7 @@ importers:
         version: link:../micromark-extension-highlight-mark
       unist-util-add:
         specifier: ^1.0.1
-        version: 1.1.0
+        version: 1.2.0
     devDependencies:
       remark-parse:
         specifier: ^11.0.0
@@ -1470,8 +1470,8 @@ packages:
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
 
-  unist-util-add@1.1.0:
-    resolution: {integrity: sha512-vicq5ky0KJGbkQBKYUJQcuunrTf1BHRXJfcLtJovbT8dr0uBbZI0o2OgfaEUzj75z0Cvij8K+QxJvZgO97e0zA==}
+  unist-util-add@1.2.0:
+    resolution: {integrity: sha512-2dEJEtrp+n7qu56D46q1tXRC0HQBk7QuQ2I8oLq/0IynTvbNI5vIu4H5otxhXXvUuISmfiRbXcEsuan+JTzZAg==}
     engines: {node: '>=18'}
 
   unist-util-is@6.0.0:
@@ -3065,7 +3065,7 @@ snapshots:
       trough: 2.2.0
       vfile: 6.0.2
 
-  unist-util-add@1.1.0: {}
+  unist-util-add@1.2.0: {}
 
   unist-util-is@6.0.0:
     dependencies:
