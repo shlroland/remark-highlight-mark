@@ -16,13 +16,13 @@ importers:
         version: 20.1.3
       '@types/node':
         specifier: ^20.14.13
-        version: 20.16.9
+        version: 20.16.10
       c8:
         specifier: ^10.0.0
         version: 10.1.2
       tsup:
         specifier: ^8.2.3
-        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.9))(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
       type-coverage:
         specifier: ^2.29.1
         version: 2.29.1(typescript@5.6.2)
@@ -50,7 +50,7 @@ importers:
         version: 2.0.0
       tsup:
         specifier: ^8.2.3
-        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.9))(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
       unist-util-remove-position:
         specifier: ^5.0.0
         version: 5.0.0
@@ -81,7 +81,7 @@ importers:
         version: 4.0.0
       tsup:
         specifier: ^8.2.3
-        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.9))(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
 
   packages/remark-highlight-mark:
     dependencies:
@@ -500,8 +500,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.16.9':
-    resolution: {integrity: sha512-rkvIVJxsOfBejxK7I0FO5sa2WxFmJCzoDwcd88+fq/CUfynNywTo/1/T6hyFz22CyztsnLS9nVlHOnTI36RH5w==}
+  '@types/node@20.16.10':
+    resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -1826,24 +1826,24 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@microsoft/api-extractor-model@7.29.4(@types/node@20.16.9)':
+  '@microsoft/api-extractor-model@7.29.4(@types/node@20.16.10)':
     dependencies:
       '@microsoft/tsdoc': 0.15.0
       '@microsoft/tsdoc-config': 0.17.0
-      '@rushstack/node-core-library': 5.5.1(@types/node@20.16.9)
+      '@rushstack/node-core-library': 5.5.1(@types/node@20.16.10)
     transitivePeerDependencies:
       - '@types/node'
     optional: true
 
-  '@microsoft/api-extractor@7.47.4(@types/node@20.16.9)':
+  '@microsoft/api-extractor@7.47.4(@types/node@20.16.10)':
     dependencies:
-      '@microsoft/api-extractor-model': 7.29.4(@types/node@20.16.9)
+      '@microsoft/api-extractor-model': 7.29.4(@types/node@20.16.10)
       '@microsoft/tsdoc': 0.15.0
       '@microsoft/tsdoc-config': 0.17.0
-      '@rushstack/node-core-library': 5.5.1(@types/node@20.16.9)
+      '@rushstack/node-core-library': 5.5.1(@types/node@20.16.10)
       '@rushstack/rig-package': 0.5.3
-      '@rushstack/terminal': 0.13.3(@types/node@20.16.9)
-      '@rushstack/ts-command-line': 4.22.3(@types/node@20.16.9)
+      '@rushstack/terminal': 0.13.3(@types/node@20.16.10)
+      '@rushstack/ts-command-line': 4.22.3(@types/node@20.16.10)
       lodash: 4.17.21
       minimatch: 3.0.8
       resolve: 1.22.8
@@ -1928,7 +1928,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.21.3':
     optional: true
 
-  '@rushstack/node-core-library@5.5.1(@types/node@20.16.9)':
+  '@rushstack/node-core-library@5.5.1(@types/node@20.16.10)':
     dependencies:
       ajv: 8.13.0
       ajv-draft-04: 1.0.0(ajv@8.13.0)
@@ -1939,7 +1939,7 @@ snapshots:
       resolve: 1.22.8
       semver: 7.5.4
     optionalDependencies:
-      '@types/node': 20.16.9
+      '@types/node': 20.16.10
     optional: true
 
   '@rushstack/rig-package@0.5.3':
@@ -1948,17 +1948,17 @@ snapshots:
       strip-json-comments: 3.1.1
     optional: true
 
-  '@rushstack/terminal@0.13.3(@types/node@20.16.9)':
+  '@rushstack/terminal@0.13.3(@types/node@20.16.10)':
     dependencies:
-      '@rushstack/node-core-library': 5.5.1(@types/node@20.16.9)
+      '@rushstack/node-core-library': 5.5.1(@types/node@20.16.10)
       supports-color: 8.1.1
     optionalDependencies:
-      '@types/node': 20.16.9
+      '@types/node': 20.16.10
     optional: true
 
-  '@rushstack/ts-command-line@4.22.3(@types/node@20.16.9)':
+  '@rushstack/ts-command-line@4.22.3(@types/node@20.16.10)':
     dependencies:
-      '@rushstack/terminal': 0.13.3(@types/node@20.16.9)
+      '@rushstack/terminal': 0.13.3(@types/node@20.16.10)
       '@types/argparse': 1.0.38
       argparse: 1.0.10
       string-argv: 0.3.2
@@ -1987,7 +1987,7 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.16.9':
+  '@types/node@20.16.10':
     dependencies:
       undici-types: 6.19.8
 
@@ -2954,7 +2954,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.9))(typescript@5.6.2)(yaml@2.5.0):
+  tsup@8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.1)
       cac: 6.7.14
@@ -2973,7 +2973,7 @@ snapshots:
       tinyglobby: 0.2.6
       tree-kill: 1.2.2
     optionalDependencies:
-      '@microsoft/api-extractor': 7.47.4(@types/node@20.16.9)
+      '@microsoft/api-extractor': 7.47.4(@types/node@20.16.10)
       typescript: 5.6.2
     transitivePeerDependencies:
       - jiti
