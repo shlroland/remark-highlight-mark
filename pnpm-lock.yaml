@@ -22,13 +22,13 @@ importers:
         version: 10.1.2
       tsup:
         specifier: ^8.2.3
-        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.3)(yaml@2.5.0)
       type-coverage:
         specifier: ^2.29.1
-        version: 2.29.5(typescript@5.6.2)
+        version: 2.29.5(typescript@5.6.3)
       typescript:
         specifier: ^5.5.4
-        version: 5.6.2
+        version: 5.6.3
 
   packages/mdast-util-highlight-mark:
     dependencies:
@@ -50,7 +50,7 @@ importers:
         version: 2.0.0
       tsup:
         specifier: ^8.2.3
-        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.3)(yaml@2.5.0)
       unist-util-remove-position:
         specifier: ^5.0.0
         version: 5.0.0
@@ -81,7 +81,7 @@ importers:
         version: 4.0.0
       tsup:
         specifier: ^8.2.3
-        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.3)(yaml@2.5.0)
 
   packages/remark-highlight-mark:
     dependencies:
@@ -1453,8 +1453,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.6.2:
-    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
+  typescript@5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2953,7 +2953,7 @@ snapshots:
 
   tslib@2.7.0: {}
 
-  tsup@8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0):
+  tsup@8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.3)(yaml@2.5.0):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.1)
       cac: 6.7.14
@@ -2973,39 +2973,39 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       '@microsoft/api-extractor': 7.47.4(@types/node@20.16.10)
-      typescript: 5.6.2
+      typescript: 5.6.3
     transitivePeerDependencies:
       - jiti
       - supports-color
       - tsx
       - yaml
 
-  tsutils@3.21.0(typescript@5.6.2):
+  tsutils@3.21.0(typescript@5.6.3):
     dependencies:
       tslib: 1.14.1
-      typescript: 5.6.2
+      typescript: 5.6.3
 
-  type-coverage-core@2.29.5(typescript@5.6.2):
+  type-coverage-core@2.29.5(typescript@5.6.3):
     dependencies:
       fast-glob: 3.3.2
       minimatch: 10.0.1
       normalize-path: 3.0.0
       tslib: 2.7.0
-      tsutils: 3.21.0(typescript@5.6.2)
-      typescript: 5.6.2
+      tsutils: 3.21.0(typescript@5.6.3)
+      typescript: 5.6.3
 
-  type-coverage@2.29.5(typescript@5.6.2):
+  type-coverage@2.29.5(typescript@5.6.3):
     dependencies:
       chalk: 4.1.2
       minimist: 1.2.8
-      type-coverage-core: 2.29.5(typescript@5.6.2)
+      type-coverage-core: 2.29.5(typescript@5.6.3)
     transitivePeerDependencies:
       - typescript
 
   typescript@5.4.2:
     optional: true
 
-  typescript@5.6.2: {}
+  typescript@5.6.3: {}
 
   undici-types@6.19.8: {}
 
