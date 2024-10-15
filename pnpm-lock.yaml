@@ -25,7 +25,7 @@ importers:
         version: 8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0)
       type-coverage:
         specifier: ^2.29.1
-        version: 2.29.1(typescript@5.6.2)
+        version: 2.29.5(typescript@5.6.2)
       typescript:
         specifier: ^5.5.4
         version: 5.6.2
@@ -1049,10 +1049,6 @@ packages:
   micromark@4.0.0:
     resolution: {integrity: sha512-o/sd0nMof8kYff+TqcDx3VSrgBTcZpSvYcAHIfHhv5VAuNmisCxjhx6YmxS8PFEpb9z5WKWKPdzf0jM23ro3RQ==}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
-    engines: {node: '>=8.6'}
-
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
@@ -1060,6 +1056,10 @@ packages:
   mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
+
+  minimatch@10.0.1:
+    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
+    engines: {node: 20 || >=22}
 
   minimatch@3.0.8:
     resolution: {integrity: sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==}
@@ -1411,8 +1411,8 @@ packages:
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
 
-  tslib@2.6.3:
-    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
   tsup@8.3.0:
     resolution: {integrity: sha512-ALscEeyS03IomcuNdFdc0YWGVIkwH1Ws7nfTbAPuoILvEV2hpGQAY72LIOjglGo4ShWpZfpBqP/jpQVCzqYQag==}
@@ -1439,13 +1439,13 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
-  type-coverage-core@2.29.1:
-    resolution: {integrity: sha512-lonikLRWnejbW9qsjoUsqXxQ3c4D0LPHaY2fsN5YD78sHAL27AaIoWYOjtitSqmv5UCS+3tv4qYjnj56vUH5eQ==}
+  type-coverage-core@2.29.5:
+    resolution: {integrity: sha512-UHvYiZGZ3N5K1gBfc0SRsqDBXtVBB56bFtSkqfV48id1qyLNfhbiz2/AnfJ1LugryI850Kzkub9UfeWRz0bfxA==}
     peerDependencies:
       typescript: 2 || 3 || 4 || 5
 
-  type-coverage@2.29.1:
-    resolution: {integrity: sha512-hsS1UYDrSltiSqMHJQn5wRFJiAeSA1PItMgeszxBkBjZEbtCzzmAU9dQswR1k8z0/ewj2/SbYEldYRurxgmxhA==}
+  type-coverage@2.29.5:
+    resolution: {integrity: sha512-/eHDRvofWHP0nseHBTn/2FXbMyzo9B6Y6Wa3RUAS7+Y+UsMQxN+dh8wWhhbjCdBcQOJkkH4v3UmPbc0mTuZKWQ==}
     hasBin: true
 
   typescript@5.4.2:
@@ -2246,7 +2246,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fastq@1.17.1:
     dependencies:
@@ -2625,17 +2625,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  micromatch@4.0.7:
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
-
   micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
 
   mimic-fn@2.1.0: {}
+
+  minimatch@10.0.1:
+    dependencies:
+      brace-expansion: 2.0.1
 
   minimatch@3.0.8:
     dependencies:
@@ -2952,7 +2951,7 @@ snapshots:
 
   tslib@1.14.1: {}
 
-  tslib@2.6.3: {}
+  tslib@2.7.0: {}
 
   tsup@8.3.0(@microsoft/api-extractor@7.47.4(@types/node@20.16.10))(typescript@5.6.2)(yaml@2.5.0):
     dependencies:
@@ -2986,20 +2985,20 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.6.2
 
-  type-coverage-core@2.29.1(typescript@5.6.2):
+  type-coverage-core@2.29.5(typescript@5.6.2):
     dependencies:
       fast-glob: 3.3.2
-      minimatch: 9.0.5
+      minimatch: 10.0.1
       normalize-path: 3.0.0
-      tslib: 2.6.3
+      tslib: 2.7.0
       tsutils: 3.21.0(typescript@5.6.2)
       typescript: 5.6.2
 
-  type-coverage@2.29.1(typescript@5.6.2):
+  type-coverage@2.29.5(typescript@5.6.2):
     dependencies:
       chalk: 4.1.2
       minimist: 1.2.8
-      type-coverage-core: 2.29.1(typescript@5.6.2)
+      type-coverage-core: 2.29.5(typescript@5.6.2)
     transitivePeerDependencies:
       - typescript
 
