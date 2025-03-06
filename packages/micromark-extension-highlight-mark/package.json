@@ -22,8 +22,7 @@
     "micromark-util-classify-character": "^2.0.0",
     "micromark-util-resolve-all": "^2.0.0",
     "micromark-util-symbol": "^2.0.0",
-    "micromark-util-types": "^2.0.0",
-    "uvu": "^0.5.6"
+    "micromark-util-types": "^2.0.0"
   },
   "devDependencies": {
     "micromark": "^4.0.0",

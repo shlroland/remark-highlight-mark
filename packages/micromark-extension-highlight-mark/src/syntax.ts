@@ -1,4 +1,4 @@
-import { ok as assert } from 'uvu/assert'
+import { ok as assert } from 'node:assert/strict'
 import { splice } from 'micromark-util-chunked'
 import { classifyCharacter } from 'micromark-util-classify-character'
 import { resolveAll } from 'micromark-util-resolve-all'
